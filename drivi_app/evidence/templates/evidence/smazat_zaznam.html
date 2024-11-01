@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smazat záznam</title>
+</head>
+<body>
+    <h1>Smazat záznam</h1>
+    <p>Opravdu chcete smazat záznam "{{ zaznam.nazev }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Ano, smazat</button>
+        <a href="{% url 'seznam_zaznamu' %}">Ne, vrátit se zpět</a>
+    </form>
+</body>
+</html>

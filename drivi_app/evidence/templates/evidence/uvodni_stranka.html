@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úvodní stránka</title>
+</head>
+<body>
+    <h1>Vítejte na stránce evidence dříví</h1>
+
+    <!-- Zobrazí aktuální datum a čas -->
+    <p>Aktuální datum a čas: {{ current_datetime }}</p>
+
+    <!-- Odkazy pro přihlášení a registraci -->
+    <a href="{% url 'login' %}">Přihlášení</a> |
+    <a href="{% url 'register' %}">Registrace</a>
+
+    <!-- Obrázek (můžete později nahradit vlastním) -->
+    <img src="{% static 'images/vase_obrazek.jpg' %}" alt="Ilustrativní obrázek">
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravit záznam</title>
+</head>
+<body>
+    <h1>Upravit záznam</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Uložit změny</button>
+    </form>
+    <p><a href="{% url 'seznam_zaznamu' %}">Zpět na seznam záznamů</a></p>
+</body>
+</html>

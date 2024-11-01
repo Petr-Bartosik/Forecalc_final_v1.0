@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Hlavní menu</h1>
+<ul>
+    <li><a href="{% url 'novy_zaznam' %}">Nový záznam</a></li>
+    <li><a href="{% url 'seznam_zaznamu' %}">Otevřít záznamy</a></li>
+    <li><a href="{% url 'smazat_zaznam' pk=1 %}">Smazat záznamy</a></li>  <!-- Příklad s `pk=1`, potřebuje ID konkrétního záznamu -->
+    <li><a href="{% url 'upravit_zaznam' pk=1 %}">Upravit záznamy</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam záznamů</title>
+</head>
+<body>
+    <h1>Seznam záznamů o dříví</h1>
+    <ul>
+        {% for zaznam in zaznamy %}
+            <li>
+                {{ zaznam.nazev }} - Objem: {{ zaznam.objem }} m³ <br>
+                <strong>Délka:</strong> {{ zaznam.delka }} m, <strong>Průměr:</strong> {{ zaznam.prumer }} cm
+                <a href="{% url 'upravit_zaznam' zaznam.pk %}">Upravit</a> |
+                <a href="{% url 'smazat_zaznam' zaznam.pk %}">Smazat</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>Celkový objem: {{ total_objem }} m³</p>
+    <p><a href="{% url 'novy_zaznam' %}">Přidat nový záznam</a></p>
+    <p><a href="{% url 'menu' %}">Zpět do hlavního menu</a></p>
+</body>
+</html>

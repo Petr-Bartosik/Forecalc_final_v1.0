@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Délka</th>
+        <th>Průměr</th>
+        <th>Objem</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{ item.length }}</td>
+        <td>{{ item.diameter }}</td>
+        <td>{{ item.volume }}</td>
+    </tr>
+    {% endfor %}
+</table>

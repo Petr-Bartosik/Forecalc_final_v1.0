@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nový záznam</title>
+</head>
+<body>
+    <h1>Nový záznam o dříví</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Uložit záznam</button>
+    </form>
+    <p><a href="{% url 'menu' %}">Zpět do hlavního menu</a></p>
+</body>
+</html>
